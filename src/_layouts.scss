@@ -1,0 +1,12 @@
+// Layouts
+
+.bin {
+    margin: auto;
+    max-width: 1344px;
+    @include use-at(desktop) {
+        max-width: 960px;
+    };
+    @include use-at(tablet) {
+        margin: auto 20px;
+    };
+}

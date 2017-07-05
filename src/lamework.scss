@@ -1,0 +1,22 @@
+// lamework.scss framework
+
+// imports
+@import "sizes";
+@import "layouts";
+@import "fonts";
+
+body {
+
+
+
+    background: red;
+    @include use-at(desktop) {
+        background: lighten(red, 30%);
+    };
+    @include use-at(tablet) {
+        background: lighten(red, 20%);
+    };
+    @include use-at(phone) {
+        background: lighten(red, 10%);
+    };
+}

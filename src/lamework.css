@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
+.bin {
+  margin: auto;
+  max-width: 1344px; }
+  @media (max-width: 1384px) {
+    .bin {
+      max-width: 960px; } }
+  @media (max-width: 1000px) {
+    .bin {
+      margin: auto 20px; } }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif; }
+
+body {
+  background: red; }
+  @media (max-width: 1384px) {
+    body {
+      background: #ff9999; } }
+  @media (max-width: 1000px) {
+    body {
+      background: #ff6666; } }
+  @media (max-width: 640px) {
+    body {
+      background: #ff3333; } }
+
+/*# sourceMappingURL=lamework.css.map */
