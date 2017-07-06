@@ -1,0 +1,71 @@
+// Colors
+
+$red: #F44336;
+$purple: #673AB7;
+$blue: #2196F3;
+$teal: #009688;
+$green: #43A047;
+$yellow: #FFEB3B;
+$orange: #FF5722;
+$black: #000;
+$grey: #757575;
+$coal: #424242;
+$white: #FFF;
+$shadow: rgba(0,0,0,0.3);
+
+@mixin build-color($color, $text-color: #fff) {
+    background: $color;
+    color: $text-color;
+    &.btn:hover {
+        background: lighten($color, 15%);
+    }
+}
+
+.red {
+    @include build-color($red);
+}
+
+.purple {
+    @include build-color($purple);
+}
+
+.blue {
+    @include build-color($blue);
+}
+
+.teal {
+    @include build-color($teal);
+}
+
+.green {
+    @include build-color($green);
+}
+
+.yellow {
+    @include build-color($yellow, #444);
+}
+
+.orange {
+    @include build-color($orange);
+}
+
+.black {
+    @include build-color($black);
+}
+
+.grey, .gray {
+    @include build-color($grey);
+}
+
+.coal {
+    @include build-color($coal);
+}
+
+.white {
+    @include build-color($white, $black);
+}
+
+.shadow {
+    box-shadow: 0px 2px 2px $shadow;
+    z-index: 1;
+}

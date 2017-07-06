@@ -1,13 +1,113 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway");
+.red {
+  background: #F44336;
+  color: #fff; }
+  .red.btn:hover {
+    background: #f8877f; }
+
+.purple {
+  background: #673AB7;
+  color: #fff; }
+  .purple.btn:hover {
+    background: #916dd1; }
+
+.blue {
+  background: #2196F3;
+  color: #fff; }
+  .blue.btn:hover {
+    background: #6ab8f7; }
+
+.teal {
+  background: #009688;
+  color: #fff; }
+  .teal.btn:hover {
+    background: #00e3cd; }
+
+.green {
+  background: #43A047;
+  color: #fff; }
+  .green.btn:hover {
+    background: #6dc271; }
+
+.yellow {
+  background: #FFEB3B;
+  color: #444; }
+  .yellow.btn:hover {
+    background: #fff388; }
+
+.orange {
+  background: #FF5722;
+  color: #fff; }
+  .orange.btn:hover {
+    background: #ff916f; }
+
+.black {
+  background: #000;
+  color: #fff; }
+  .black.btn:hover {
+    background: #262626; }
+
+.grey, .gray {
+  background: #757575;
+  color: #fff; }
+  .grey.btn:hover, .gray.btn:hover {
+    background: #9b9b9b; }
+
+.coal {
+  background: #424242;
+  color: #fff; }
+  .coal.btn:hover {
+    background: #686868; }
+
+.white {
+  background: #FFF;
+  color: #000; }
+  .white.btn:hover {
+    background: white; }
+
+.shadow {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  z-index: 1; }
+
+/*
+    .bin
+    the container that puts appropriate margins on things
+*/
 .bin {
-  margin: auto;
-  max-width: 1344px; }
+  margin: 0px auto;
+  width: 1344px; }
   @media (max-width: 1384px) {
     .bin {
-      max-width: 960px; } }
+      width: 960px; } }
   @media (max-width: 1000px) {
     .bin {
-      margin: auto 20px; } }
+      margin: 0px 20px; } }
+
+/*
+    .hero + .short || .reg || .tall || .full
+    a section for headers
+    .hero > .top || .mid || .bottom
+*/
+.hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column; }
+  .hero .top, .hero .bottom {
+    flex: 0 0; }
+  .hero .mid {
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .hero.short {
+    min-height: 200px !important; }
+  .hero.reg {
+    min-height: 400px !important; }
+  .hero.tall {
+    min-height: 600px !important; }
+  .hero.full {
+    min-height: 100vh !important; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
@@ -15,16 +115,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif; }
 
+p {
+  font-size: 18px; }
+
 body {
-  background: red; }
-  @media (max-width: 1384px) {
-    body {
-      background: #ff9999; } }
-  @media (max-width: 1000px) {
-    body {
-      background: #ff6666; } }
-  @media (max-width: 640px) {
-    body {
-      background: #ff3333; } }
+  margin: 0; }
 
 /*# sourceMappingURL=lamework.css.map */
