@@ -16,8 +16,13 @@ $shadow: rgba(0,0,0,0.3);
 @mixin build-color($color, $text-color: #fff) {
     background: $color;
     color: $text-color;
-    &.btn:hover {
-        background: lighten($color, 15%);
+    &.btn:hover, &.nav a:hover {
+        @if (lightness($color) < 50) {
+            background: lighten($color, 15%);
+        }
+        @else {
+            background: darken($color, 15%);
+        }
     }
 }
 

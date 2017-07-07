@@ -11,6 +11,7 @@
         width: 960px;
     };
     @include use-at(tablet) {
+        width: auto;
         margin: 0px 20px;
     };
 }

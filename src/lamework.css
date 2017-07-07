@@ -2,68 +2,68 @@
 .red {
   background: #F44336;
   color: #fff; }
-  .red.btn:hover {
-    background: #f8877f; }
+  .red.btn:hover, .red.nav a:hover {
+    background: #d2190b; }
 
 .purple {
   background: #673AB7;
   color: #fff; }
-  .purple.btn:hover {
+  .purple.btn:hover, .purple.nav a:hover {
     background: #916dd1; }
 
 .blue {
   background: #2196F3;
   color: #fff; }
-  .blue.btn:hover {
-    background: #6ab8f7; }
+  .blue.btn:hover, .blue.nav a:hover {
+    background: #0a6ebd; }
 
 .teal {
   background: #009688;
   color: #fff; }
-  .teal.btn:hover {
+  .teal.btn:hover, .teal.nav a:hover {
     background: #00e3cd; }
 
 .green {
   background: #43A047;
   color: #fff; }
-  .green.btn:hover {
+  .green.btn:hover, .green.nav a:hover {
     background: #6dc271; }
 
 .yellow {
   background: #FFEB3B;
   color: #444; }
-  .yellow.btn:hover {
-    background: #fff388; }
+  .yellow.btn:hover, .yellow.nav a:hover {
+    background: #eed500; }
 
 .orange {
   background: #FF5722;
   color: #fff; }
-  .orange.btn:hover {
-    background: #ff916f; }
+  .orange.btn:hover, .orange.nav a:hover {
+    background: #d53300; }
 
 .black {
   background: #000;
   color: #fff; }
-  .black.btn:hover {
+  .black.btn:hover, .black.nav a:hover {
     background: #262626; }
 
 .grey, .gray {
   background: #757575;
   color: #fff; }
-  .grey.btn:hover, .gray.btn:hover {
+  .grey.btn:hover, .grey.nav a:hover, .gray.btn:hover, .gray.nav a:hover {
     background: #9b9b9b; }
 
 .coal {
   background: #424242;
   color: #fff; }
-  .coal.btn:hover {
+  .coal.btn:hover, .coal.nav a:hover {
     background: #686868; }
 
 .white {
   background: #FFF;
   color: #000; }
-  .white.btn:hover {
-    background: white; }
+  .white.btn:hover, .white.nav a:hover {
+    background: #d9d9d9; }
 
 .shadow {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -81,6 +81,7 @@
       width: 960px; } }
   @media (max-width: 1000px) {
     .bin {
+      width: auto;
       margin: 0px 20px; } }
 
 /*
@@ -113,7 +114,10 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  margin: .1em 0; }
+  h1 ~ *, h2 ~ *, h3 ~ *, h4 ~ *, h5 ~ *, h6 ~ * {
+    margin-bottom: .67em; }
 
 p {
   font-size: 18px; }
