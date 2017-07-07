@@ -94,6 +94,21 @@
   min-height: 400px;
   display: flex;
   flex-direction: column; }
+  .hero.img, .hero.img-dark {
+    background-position: center;
+    background-size: cover;
+    color: #fff; }
+    .hero.img > *, .hero.img-dark > * {
+      z-index: 2; }
+  .hero.img-dark::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    content: ''; }
   .hero .top, .hero .bottom {
     flex: 0 0; }
   .hero .mid {
