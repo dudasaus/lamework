@@ -1,0 +1,58 @@
+// Navigation
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+    }
+
+    & > .bin {
+        display: inherit;
+        justify-content: inherit;
+        flex-direction: inherit;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+    &.right {
+        justify-content: flex-end;
+    }
+    &.stretch-fill a {
+        flex-grow: 1;
+    }
+    a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        text-decoration: none;
+        cursor: pointer;
+        color: inherit;
+        min-width: 104px;
+        text-align: center;
+    }
+
+    @mixin stacked {
+        flex-direction: column;
+        & > .bin {
+            margin: 0;
+        }
+        a {
+            display: flex;
+            height: 32px;
+        }
+    }
+
+    @include use-at(tablet) {
+        &.stack-at-tablet {
+            @include stacked;
+        }
+    };
+    @include use-at(phone) {
+        @include stacked;
+    };
+}

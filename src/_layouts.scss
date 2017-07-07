@@ -1,5 +1,10 @@
 // Layouts
 
+
+body {
+    margin: 0;
+}
+
 /*
     .bin
     the container that puts appropriate margins on things
@@ -18,7 +23,7 @@
 
 
 /*
-    .hero + .short || .reg || .tall || .full
+    .hero + .short || .reg || .tall || .full || .img || .img-dark
     a section for headers
     .hero > .top || .mid || .bottom
 */

@@ -3,71 +3,76 @@
   background: #F44336;
   color: #fff; }
   .red.btn:hover, .red.nav a:hover {
-    background: #d2190b; }
+    background: #ea1c0d; }
 
 .purple {
   background: #673AB7;
   color: #fff; }
   .purple.btn:hover, .purple.nav a:hover {
-    background: #916dd1; }
+    background: #8259cb; }
 
 .blue {
   background: #2196F3;
   color: #fff; }
   .blue.btn:hover, .blue.nav a:hover {
-    background: #0a6ebd; }
+    background: #0c7cd5; }
 
 .teal {
   background: #009688;
   color: #fff; }
   .teal.btn:hover, .teal.nav a:hover {
-    background: #00e3cd; }
+    background: #00c9b6; }
 
 .green {
   background: #43A047;
   color: #fff; }
   .green.btn:hover, .green.nav a:hover {
-    background: #6dc271; }
+    background: #5bbb60; }
 
 .yellow {
   background: #FFEB3B;
   color: #444; }
   .yellow.btn:hover, .yellow.nav a:hover {
-    background: #eed500; }
+    background: #ffe608; }
 
 .orange {
   background: #FF5722;
   color: #fff; }
   .orange.btn:hover, .orange.nav a:hover {
-    background: #d53300; }
+    background: #ee3900; }
 
 .black {
   background: #000;
   color: #fff; }
   .black.btn:hover, .black.nav a:hover {
-    background: #262626; }
+    background: #1a1a1a; }
 
 .grey, .gray {
   background: #757575;
   color: #fff; }
   .grey.btn:hover, .grey.nav a:hover, .gray.btn:hover, .gray.nav a:hover {
-    background: #9b9b9b; }
+    background: #8f8f8f; }
 
 .coal {
   background: #424242;
   color: #fff; }
   .coal.btn:hover, .coal.nav a:hover {
-    background: #686868; }
+    background: #5c5c5c; }
 
 .white {
   background: #FFF;
   color: #000; }
   .white.btn:hover, .white.nav a:hover {
-    background: #d9d9d9; }
+    background: #e6e6e6; }
 
 .shadow {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   z-index: 1; }
+  .shadow.force ~ * {
+    z-index: -1; }
+
+body {
+  margin: 0; }
 
 /*
     .bin
@@ -85,7 +90,7 @@
       margin: 0px 20px; } }
 
 /*
-    .hero + .short || .reg || .tall || .full
+    .hero + .short || .reg || .tall || .full || .img || .img-dark
     a section for headers
     .hero > .top || .mid || .bottom
 */
@@ -137,7 +142,47 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-size: 18px; }
 
-body {
-  margin: 0; }
+.nav {
+  display: flex;
+  justify-content: flex-start; }
+  .nav.sticky {
+    position: fixed;
+    width: 100%; }
+  .nav > .bin {
+    display: inherit;
+    justify-content: inherit;
+    flex-direction: inherit; }
+  .nav.center {
+    justify-content: center; }
+  .nav.right {
+    justify-content: flex-end; }
+  .nav.stretch-fill a {
+    flex-grow: 1; }
+  .nav a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    min-width: 104px;
+    text-align: center; }
+  @media (max-width: 1000px) {
+    .nav.stack-at-tablet {
+      flex-direction: column; }
+      .nav.stack-at-tablet > .bin {
+        margin: 0; }
+      .nav.stack-at-tablet a {
+        display: flex;
+        height: 32px; } }
+  @media (max-width: 640px) {
+    .nav {
+      flex-direction: column; }
+      .nav > .bin {
+        margin: 0; }
+      .nav a {
+        display: flex;
+        height: 32px; } }
 
 /*# sourceMappingURL=lamework.css.map */
