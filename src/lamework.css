@@ -2,67 +2,67 @@
 .red {
   background: #F44336;
   color: #fff; }
-  .red.btn:hover, .red.nav a:hover {
+  .red.btn:hover, .red.nav a:hover, .red.nav span:hover {
     background: #ea1c0d; }
 
 .purple {
   background: #673AB7;
   color: #fff; }
-  .purple.btn:hover, .purple.nav a:hover {
+  .purple.btn:hover, .purple.nav a:hover, .purple.nav span:hover {
     background: #8259cb; }
 
 .blue {
   background: #2196F3;
   color: #fff; }
-  .blue.btn:hover, .blue.nav a:hover {
+  .blue.btn:hover, .blue.nav a:hover, .blue.nav span:hover {
     background: #0c7cd5; }
 
 .teal {
   background: #009688;
   color: #fff; }
-  .teal.btn:hover, .teal.nav a:hover {
+  .teal.btn:hover, .teal.nav a:hover, .teal.nav span:hover {
     background: #00c9b6; }
 
 .green {
   background: #43A047;
   color: #fff; }
-  .green.btn:hover, .green.nav a:hover {
+  .green.btn:hover, .green.nav a:hover, .green.nav span:hover {
     background: #5bbb60; }
 
 .yellow {
   background: #FFEB3B;
   color: #444; }
-  .yellow.btn:hover, .yellow.nav a:hover {
+  .yellow.btn:hover, .yellow.nav a:hover, .yellow.nav span:hover {
     background: #ffe608; }
 
 .orange {
   background: #FF5722;
   color: #fff; }
-  .orange.btn:hover, .orange.nav a:hover {
+  .orange.btn:hover, .orange.nav a:hover, .orange.nav span:hover {
     background: #ee3900; }
 
 .black {
   background: #000;
   color: #fff; }
-  .black.btn:hover, .black.nav a:hover {
+  .black.btn:hover, .black.nav a:hover, .black.nav span:hover {
     background: #1a1a1a; }
 
 .grey, .gray {
   background: #757575;
   color: #fff; }
-  .grey.btn:hover, .grey.nav a:hover, .gray.btn:hover, .gray.nav a:hover {
+  .grey.btn:hover, .grey.nav a:hover, .grey.nav span:hover, .gray.btn:hover, .gray.nav a:hover, .gray.nav span:hover {
     background: #8f8f8f; }
 
 .coal {
   background: #424242;
   color: #fff; }
-  .coal.btn:hover, .coal.nav a:hover {
+  .coal.btn:hover, .coal.nav a:hover, .coal.nav span:hover {
     background: #5c5c5c; }
 
 .white {
   background: #FFF;
   color: #000; }
-  .white.btn:hover, .white.nav a:hover {
+  .white.btn:hover, .white.nav a:hover, .white.nav span:hover {
     background: #e6e6e6; }
 
 .shadow {
@@ -138,48 +138,106 @@ body {
   flex-wrap: wrap; }
 
 /*
-    .egg-[1 || 2 || 3 || 4 || 5]
-    the number represents how many would fit in a row
+    .egg-[ 1 <= n <= 12 || fifth]
+    Where n represent a n/12 proportion of the width
+    fifth = 1/5 of the width
     goes in a .carton
 */
-.egg-1 {
+.egg-12, .egg-full {
   display: inline-block;
   width: 99.99%; }
   @media (max-width: 640px) {
-    .egg-1 {
+    .egg-12, .egg-full {
       width: 99.99%; } }
 
-.egg-2 {
+.egg-11 {
+  display: inline-block;
+  width: 91.66%; }
+  @media (max-width: 640px) {
+    .egg-11 {
+      width: 99.99%; } }
+
+.egg-10 {
+  display: inline-block;
+  width: 83.33%; }
+  @media (max-width: 640px) {
+    .egg-10 {
+      width: 99.99%; } }
+
+.egg-9, .egg-three-quarters {
+  display: inline-block;
+  width: 74.99%; }
+  @media (max-width: 640px) {
+    .egg-9, .egg-three-quarters {
+      width: 99.99%; } }
+
+.egg-8, .egg-two-thirds {
+  display: inline-block;
+  width: 66.66%; }
+  @media (max-width: 640px) {
+    .egg-8, .egg-two-thirds {
+      width: 99.99%; } }
+
+.egg-7 {
+  display: inline-block;
+  width: 58.33%; }
+  @media (max-width: 640px) {
+    .egg-7 {
+      width: 99.99%; } }
+
+.egg-6, .egg-half {
   display: inline-block;
   width: 49.99%; }
   @media (max-width: 640px) {
-    .egg-2 {
-      width: 99.99%; } }
-
-.egg-3 {
-  display: inline-block;
-  width: 33.33%; }
-  @media (max-width: 640px) {
-    .egg-3 {
-      width: 99.99%; } }
-
-.egg-4 {
-  display: inline-block;
-  width: 24.99%; }
-  @media (max-width: 640px) {
-    .egg-4 {
+    .egg-6, .egg-half {
       width: 99.99%; } }
 
 .egg-5 {
   display: inline-block;
-  width: 19.99%; }
+  width: 41.66%; }
   @media (max-width: 640px) {
     .egg-5 {
+      width: 99.99%; } }
+
+.egg-4, .egg-third {
+  display: inline-block;
+  width: 33.33%; }
+  @media (max-width: 640px) {
+    .egg-4, .egg-third {
+      width: 99.99%; } }
+
+.egg-3, .egg-quarter {
+  display: inline-block;
+  width: 24.99%; }
+  @media (max-width: 640px) {
+    .egg-3, .egg-quarter {
+      width: 99.99%; } }
+
+.egg-fifth {
+  display: inline-block;
+  width: 19.99%; }
+  @media (max-width: 640px) {
+    .egg-fifth {
+      width: 99.99%; } }
+
+.egg-2, .egg-sixth {
+  display: inline-block;
+  width: 16.66%; }
+  @media (max-width: 640px) {
+    .egg-2, .egg-sixth {
+      width: 99.99%; } }
+
+.egg-1, .egg-tweflth {
+  display: inline-block;
+  width: 8.33%; }
+  @media (max-width: 640px) {
+    .egg-1, .egg-tweflth {
       width: 99.99%; } }
 
 /*
     .shell
     gives a little margin and padding
+    goes .egg > .shell, because that makes sense
 */
 .shell {
   margin: 2px;
@@ -211,9 +269,9 @@ p {
     justify-content: center; }
   .nav.right {
     justify-content: flex-end; }
-  .nav.stretch-fill a {
+  .nav.stretch-fill a, .nav.stretch-fill span {
     flex-grow: 1; }
-  .nav a {
+  .nav a, .nav span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -222,13 +280,18 @@ p {
     cursor: pointer;
     color: inherit;
     min-width: 104px;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+  .nav span {
+    cursor: default; }
+  .nav img {
+    max-height: calc(100% - 4px); }
   @media (max-width: 1000px) {
     .nav.stack-at-tablet {
       flex-direction: column; }
       .nav.stack-at-tablet > .bin {
         margin: 0; }
-      .nav.stack-at-tablet a {
+      .nav.stack-at-tablet a, .nav.stack-at-tablet span {
         display: flex;
         height: 32px; } }
   @media (max-width: 640px) {
@@ -236,7 +299,7 @@ p {
       flex-direction: column; }
       .nav > .bin {
         margin: 0; }
-      .nav a {
+      .nav a, .nav span {
         display: flex;
         height: 32px; } }
 

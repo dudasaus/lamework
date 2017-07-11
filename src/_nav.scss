@@ -21,7 +21,7 @@
     &.right {
         justify-content: flex-end;
     }
-    &.stretch-fill a {
+    &.stretch-fill a, {
         flex-grow: 1;
     }
     a {
@@ -34,6 +34,16 @@
         color: inherit;
         min-width: 104px;
         text-align: center;
+        position: relative;
+    }
+
+    span {
+        @extend a;
+        cursor: default;
+    }
+
+    img {
+        max-height: calc(100% - 4px);
     }
 
     @mixin stacked {

@@ -86,8 +86,9 @@ body {
 }
 
 /*
-    .egg-[1 || 2 || 3 || 4 || 5]
-    the number represents how many would fit in a row
+    .egg-[ 1 <= n <= 12 || fifth]
+    Where n represent a n/12 proportion of the width
+    fifth = 1/5 of the width
     goes in a .carton
 */
 @mixin egg($width) {
@@ -98,24 +99,56 @@ body {
     }
 }
 
-.egg-1 {
+.egg-12, .egg-full {
     @include egg(99.99%);
 }
 
-.egg-2 {
+.egg-11 {
+    @include egg(91.66%);
+}
+
+.egg-10 {
+    @include egg(83.33%);
+}
+
+.egg-9, .egg-three-quarters {
+    @include egg(74.99%);
+}
+
+.egg-8, .egg-two-thirds {
+    @include egg(66.66%);
+}
+
+.egg-7 {
+    @include egg(58.33%);
+}
+
+.egg-6, .egg-half {
     @include egg(49.99%);
 }
 
-.egg-3 {
+.egg-5 {
+    @include egg(41.66%);
+}
+
+.egg-4, .egg-third {
     @include egg(33.33%);
 }
 
-.egg-4 {
+.egg-3, .egg-quarter {
     @include egg(24.99%);
 }
 
-.egg-5 {
+.egg-fifth {
     @include egg(19.99%);
+}
+
+.egg-2, .egg-sixth {
+    @include egg(16.66%);
+}
+
+.egg-1, .egg-tweflth {
+    @include egg(8.33%);
 }
 
 /*
