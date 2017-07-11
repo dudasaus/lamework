@@ -130,6 +130,61 @@ body {
   .hero.full {
     min-height: 100vh !important; }
 
+/*
+    .carton
+*/
+.carton {
+  display: flex;
+  flex-wrap: wrap; }
+
+/*
+    .egg-[1 || 2 || 3 || 4 || 5]
+    the number represents how many would fit in a row
+    goes in a .carton
+*/
+.egg-1 {
+  display: inline-block;
+  width: 99.99%; }
+  @media (max-width: 640px) {
+    .egg-1 {
+      width: 99.99%; } }
+
+.egg-2 {
+  display: inline-block;
+  width: 49.99%; }
+  @media (max-width: 640px) {
+    .egg-2 {
+      width: 99.99%; } }
+
+.egg-3 {
+  display: inline-block;
+  width: 33.33%; }
+  @media (max-width: 640px) {
+    .egg-3 {
+      width: 99.99%; } }
+
+.egg-4 {
+  display: inline-block;
+  width: 24.99%; }
+  @media (max-width: 640px) {
+    .egg-4 {
+      width: 99.99%; } }
+
+.egg-5 {
+  display: inline-block;
+  width: 19.99%; }
+  @media (max-width: 640px) {
+    .egg-5 {
+      width: 99.99%; } }
+
+/*
+    .shell
+    gives a little margin and padding
+*/
+.shell {
+  margin: 2px;
+  padding: 4px 6px; }
+
 body {
   font-family: 'Open Sans', sans-serif; }
 

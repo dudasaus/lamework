@@ -76,3 +76,54 @@ body {
         min-height: 100vh !important;
     }
 }
+
+/*
+    .carton
+*/
+.carton {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*
+    .egg-[1 || 2 || 3 || 4 || 5]
+    the number represents how many would fit in a row
+    goes in a .carton
+*/
+@mixin egg($width) {
+    display: inline-block;
+    width: $width;
+    @include use-at(phone) {
+        width: 99.99%;
+    }
+}
+
+.egg-1 {
+    @include egg(99.99%);
+}
+
+.egg-2 {
+    @include egg(49.99%);
+}
+
+.egg-3 {
+    @include egg(33.33%);
+}
+
+.egg-4 {
+    @include egg(24.99%);
+}
+
+.egg-5 {
+    @include egg(19.99%);
+}
+
+/*
+    .shell
+    gives a little margin and padding
+    goes .egg > .shell, because that makes sense
+*/
+.shell {
+    margin: 2px;
+    padding: 4px 6px;
+}
