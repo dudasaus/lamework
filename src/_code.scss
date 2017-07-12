@@ -1,0 +1,27 @@
+// Code blocks
+
+@mixin code-props {
+    font-family: monospace;
+    background: $light-grey;
+    color: $black;
+    &.dark {
+        background: $coal;
+        color: $white;
+    }
+    &.light {
+        background: $white;
+        color: $black;
+    }
+    border-radius: 4px;
+}
+
+code, .inline-code {
+    @include code-props;
+    padding: 0px 2px;
+}
+
+.code {
+    @include code-props;
+    white-space: pre-wrap;
+    padding: 8px;
+}

@@ -10,6 +10,7 @@ $orange: #FF5722;
 $black: #000;
 $grey: #757575;
 $coal: #424242;
+$light-grey: #E6E6E6;
 $white: #FFF;
 $shadow: rgba(0,0,0,0.3);
 
@@ -64,6 +65,10 @@ $shadow: rgba(0,0,0,0.3);
 
 .coal {
     @include build-color($coal);
+}
+
+.light-grey, .light-gray {
+    @include build-color($light-grey, $black);
 }
 
 .white {
